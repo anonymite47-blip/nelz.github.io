@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JinjaCloud — Music Experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="CSS/jinja.css"> 
+
+</head>
+
+<body>
+
+  <!-- ── Sidebar ── -->
+  <aside>
+    <div class="logo">JinjaCloud</div>
+    <nav>
+      <a href="login1.html">Log out</a>
+      <a href="home page.html">🏠 Home</a>
+      <a href="library2.html" class="active">🎵 Library</a>
+      <a href="aboutnew.html">👀 About us</a>
+    </nav>
+  </aside>
+
+  <!-- ── Main ── -->
+  <main>
+    <!-- Hero -->
+    <header class="playlist-hero">
+      <div class="playlist-art">🔥</div>
+      <div class="playlist-info">
+        <h1>Our Top Tracks</h1>
+        <h3>You are currently tuned in to JinjaCloud's top tracks</h3>
+        <span>27 songs</span>
+      </div>
+    </header>
+
+    <!-- Search -->
+    <div class="header-bar">
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search by song or artist…" />
+      </div>
+    </div>
+
+    <!-- Music Grid -->
+    <div class="grid" id="musicGrid"></div>
+  </main>
+
+  <!-- ── Now Playing Bar (outside <main> so it's never clipped) ── -->
+  <div class="now-playing-bar" id="nowPlaying">
+    <div class="mini-art" id="npArt"></div>
+    <div class="mini-info">
+      <div class="nplay">Now playing</div>
+      <h4 id="npTitle">Song Title</h4>
+      <p id="npArtist">Artist Name</p>
+    </div>
+    <div class="mini-controls">
+      <button onclick="playPrev()" title="Previous">⏮</button>
+      <button class="mini-play" id="npPlayBtn" onclick="toggleActivePlay()" title="Play / Pause">❚❚</button>
+      <button onclick="playNext()" title="Next">⏭</button>
+    </div>
+  </div>
+  <script src="JS/jinja.js"></script>
+
+</body>
+</html>
